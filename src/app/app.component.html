@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<app-menubar></app-menubar>
+<div style="text-align: center;">
+    <router-outlet></router-outlet>
+</div>
+=======
+<app-customer></app-customer>
+<hr />
+
+>>>>>>> parent of 845fb2f (finalizado)
+=======
+<div *ngIf="selectedComponent === 'inicio'">
+      <button class="button-container" (click)="selectComponent('produtos')">Produtos</button>
+      <button class="button-container" (click)="selectComponent('categorias')">Categorias</button>
+      <button class="button-container" (click)="selectComponent('clientes')">Clientes</button>
+  </div>
+  
+  <ng-container *ngIf="selectedComponent === 'categorias'">
+    <app-category></app-category>
+  </ng-container>
+  
+  <ng-container *ngIf="selectedComponent === 'produtos'">
+    <app-product></app-product>
+  </ng-container>
+
+  <ng-container *ngIf="selectedComponent === 'clientes'">
+    <app-customer></app-customer>
+  </ng-container>
+
+  <ng-container *ngIf="selectedComponent != 'inicio'">
+    <button class="button-container" (click)="voltarParaInicio()">Inicio</button>
+  </ng-container>
+>>>>>>> parent of 475b7d6 (projetonovo)
